@@ -35,5 +35,11 @@ namespace ContosoPizza.Pages
             //RedirectToAction 方法是用來將使用者重新導向至 Get 頁面處理常式，這會使用更新的披薩清單重新轉譯頁面。
             return RedirectToAction("Get");
         }
+        public IActionResult OnPostDelete(int id)
+        {
+            _service.DeletePizza(id);
+
+            return RedirectToAction("Get");
+        }
     }
 }

@@ -13,6 +13,7 @@
     <input asp-for="NewPizza.Name" class="form-control" />
     <span asp-validation-for="NewPizza.Name" class="text-danger"></span>
 </div>
+<!-- New Pizza form will go here -->
 <div class="form-group">
     <label asp-for="NewPizza.Size" class="control-label"></label>
     <select asp-for="NewPizza.Size" class="form-control" id="PizzaSize">
@@ -25,6 +26,7 @@
 </div>
 <div class="form-group form-check">
     <label class="form-check-label">
+        @* @Html.DisplayNameFor 方法可用來顯示 IsGlutenFree 屬性的顯示名稱。 這是用來顯示屬性顯示名稱的 Razor 協助程式方法。 以這種方式執行標籤可確保當使用者按一下標籤時，會選取核取方塊。 *@
         <input class="form-check-input" asp-for="NewPizza.IsGlutenFree" /> @Html.DisplayNameFor(model => model.NewPizza.IsGlutenFree)
     </label>
 </div>
@@ -37,7 +39,7 @@
     <input type="submit" value="Create" class="btn btn-primary" />
 </div>
 </form>
-
+<!-- Pizza list -->
 <table class="table mt-5">
     <thead>
         <tr>
